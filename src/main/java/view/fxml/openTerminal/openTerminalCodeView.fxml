@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="550.0" prefWidth="330.0" style="-fx-border-color: #ffc300#ffc300; -fx-border-radius: 4px; -fx-border-width: 4px; -fx-background-color: white;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.views.OpenTerminalCodeViewController">
+    <children>
+        <TextArea fx:id="displayTextField" editable="false" layoutX="26.0" layoutY="32.0" prefHeight="194.0" prefWidth="279.0" style="-fx-border-color: #ffc300#ffc300 #ffc300#ffc300; -fx-border-radius: 4px; -fx-background-color: white; -fx-border-width: 2px;" text="&#10;Uw koppelcode:">
+            <cursor>
+                <Cursor fx:constant="NONE" />
+            </cursor>
+            <font>
+                <Font name="Arial" size="13.0" />
+            </font></TextArea>
+        <fx:include source="../keyBoard/UniversalKeyboard.fxml" />
+        <Button fx:id="koppelenButton" layoutX="220.0" layoutY="239.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="85.0" style="-fx-background-color: #ffc300#ffc300 ; -fx-font-weight: bold;">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="betalingButton" layoutX="25.0" layoutY="239.0" mnemonicParsing="false" onAction="#goBack" prefHeight="37.0" prefWidth="85.0" style="-fx-background-color: #ffc300#ffc300 #ffc300#ffc300 #ffc300#ffc300 #ffc300#ffc300; -fx-font-weight: bold;" text="Wis">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="middleButton" layoutX="122.0" layoutY="239.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="85.0" style="-fx-background-color: #ffc300#ffc300 #ffc300#ffc300 #ffc300#ffc300 #ffc300#ffc300; -fx-font-weight: bold;">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </Button>
+      <Button fx:id="okButton" layoutX="220.0" layoutY="452.0" mnemonicParsing="false" onAction="#pressOk" prefHeight="37.0" prefWidth="85.0" style="-fx-background-color: #9dd175#9dd175; -fx-font-weight: 500;" text="OK">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="stopButton" layoutX="25.0" layoutY="452.0" mnemonicParsing="false" onAction="#pressStop" prefHeight="37.0" prefWidth="85.0" style="-fx-background-color: #f48b7b#f48b7b; -fx-font-weight: 500;" text="STOP">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </Button>
+        <Text fx:id="message" layoutX="58.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bevestig met OK" textAlignment="CENTER" wrappingWidth="213.0">
+            <font>
+                <Font name="Arial Italic" size="13.0" />
+            </font>
+        </Text>
+        <Circle fx:id="statusLight" fill="#ff231f" layoutX="293.0" layoutY="47.0" radius="5.0" stroke="#ee3131" strokeDashOffset="3.0" strokeLineCap="ROUND" strokeType="INSIDE"/>
+    </children>
+</AnchorPane>

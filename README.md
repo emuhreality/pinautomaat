@@ -1,0 +1,3 @@
+# GoldStarBankingCo - pinautomaat
+
+GBBC atm
